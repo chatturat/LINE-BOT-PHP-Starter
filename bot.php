@@ -1,4 +1,4 @@
-<?php$access_token = 'u0594a0d57ced67ef6c8023ffd02b43ab';
+<?php$access_token = 'QjIjKdJ+DscdUp2bLlh18TwMlk95YkXco7i5Of4NCJFTm2V/M7KeQ+WBNpzzFdXdWOL0IWWjWr1FLxn0F5zXir06qyn0fINVLkYcl81CqGR4VpXb014DyVQK4E3KFVdMvG7mfT8V56S7vg7+a97lJQdB04t89/1O/w1cDnyilFU=';
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
@@ -14,10 +14,10 @@ if (!is_null($events['events'])) {
       // Get replyToken			
       $replyToken = $event['replyToken'];			
       // Build message to reply back			
-      $messages = [				'type' => 'text',				'text' => $text			];			
+      $messages = [	'type' => 'text',	'text' => $text	];			
       // Make a POST Request to Messaging API to reply to sender			
       $url = 'https://api.line.me/v2/bot/message/reply';			
-      $data = [				'replyToken' => $replyToken,				'messages' => [$messages],			];			
+      $data = [	'replyToken' => $replyToken,'messages' => [$messages]];			
       $post = json_encode($data);			
       $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);			
       $ch = curl_init($url);			
