@@ -16,10 +16,11 @@
         // Get replyToken			
         $replyToken = $event['replyToken'];			
         // Build message to reply back			
-        $messages = [	'type' => 'text',	'text' => $text,$text1	];
+        $messages = [	'type' => 'text',	'text' => $text	];
+        $messages1 = [	'type' => 'text',	'text' => $text1	];
         // Make a POST Request to Messaging API to reply to sender			
         $url = 'https://api.line.me/v2/bot/message/reply';			
-        $data = ['replyToken' => $replyToken,'messages' => [$messages],];			
+        $data = ['replyToken' => $replyToken,'messages' => [$messages],[$messages1]];			
         $post = json_encode($data);			
         $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);			
         $ch = curl_init($url);			
