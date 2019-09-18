@@ -13,7 +13,12 @@
         "id": "325708",             
         "type": "text",             
         "text": "Hello, world"          
-      }      
+      },
+    "message": {
+         "id": "325708",
+         "type": "image",
+         "contentProvider": {
+         "type": "line"      
     }  
             ]
 }
