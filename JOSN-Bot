@@ -19,6 +19,13 @@
          "type": "image",
          "contentProvider": {
          "type": "line"      
-    }  
+    },
+    "message": {
+        "id": "325708",
+        "type": "image",
+        "contentProvider": {
+        "type": "line"
+    }
+  }  
             ]
 }
