@@ -4,6 +4,10 @@
   $content = file_get_contents('php://input');
   // Parse JSON
   $events = json_decode($content, true);
+  $events[] = "Content-Type: application/json";
+  $events[] = "Authorization: Bearer {$accessToken}";
+
+  $message = $events['events'][0]['message']['text'];
   // Validate parsed JSON data
   if (!is_null($events['events'])) {	
     // Loop through each event	
